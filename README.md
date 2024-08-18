@@ -39,7 +39,7 @@ This project is licensed under the MIT license.
 
 ## Badges
 
-![badge](https://img.shields.io/david/mirasoldavila13/Vehicle-Builder-CLI)
+![badge](https://img.shields.io/mirasoldavila13/Vehicle-Builder-CLI)
 ![badge](https://img.shields.io/github/license/mirasoldavila13/Vehicle-Builder-CLI)
 ![badge](https://img.shields.io/github/last-commit/mirasoldavila13/Vehicle-Builder-CLI)
 ![badge](https://img.shields.io/github/languages/top/mirasoldavila13/Vehicle-Builder-CLI)
