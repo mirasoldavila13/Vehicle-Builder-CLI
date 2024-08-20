@@ -114,4 +114,4 @@ If you have any questions about the project, you can contact me via my GitHub pr
 
 ## Walkthrough
 
-[Click here to view the walkthrough video](https://drive.google.com/file/d/1keGemsJk7Rlg-7LRhR7XZDrU5Esccwog/view?usp=sharing)
+[Walkthrough video](https://drive.google.com/file/d/1keGemsJk7Rlg-7LRhR7XZDrU5Esccwog/view?usp=sharing)
