@@ -109,7 +109,6 @@ class Cli {
       ])
       .then((answers) => {
         const car = new Car(
-          // TODO: The generateVin method is static and should be called using the class name Cli, make sure to use Cli.generateVin() for creating a truck and motorbike as well!
           Cli.generateVin(),
           answers.color,
           answers.make,
@@ -270,7 +269,6 @@ class Cli {
                 name: 'vehicleToTowVin',
                 message: 'Select a vehicle to tow',
                 choices: this.vehicles.map((vehicle) => {
-                    console.log(`Mapping vehicle: ${vehicle.vin} -- ${vehicle.make} ${vehicle.model}`); // Added debug log
                     return {
                         name: `${vehicle.vin} -- ${vehicle.make} ${vehicle.model}`,
                         value: vehicle.vin,  // Returning only the VIN
@@ -402,11 +400,9 @@ class Cli {
           }
         }
         else if (answers.action === 'Select or create another vehicle') {
-          // start the cli to return to the initial prompt if the user wants to select or create another vehicle
           this.startCli();
           return;
         } else {
-          // exit the cli if the user selects exit
           this.exit = true;
         }
         if (!this.exit) {
