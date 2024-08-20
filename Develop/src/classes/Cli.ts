@@ -264,35 +264,39 @@ class Cli {
   // method to find a vehicle to tow
   findVehicleToTow(): void {
     inquirer
-      .prompt([
-        {
-          type: 'list',
-          name: 'vehicleToTow',
-          message: 'Select a vehicle to tow',
-          choices: this.vehicles.map((vehicle) => {
-            return {
-              name: `${vehicle.vin} -- ${vehicle.make} ${vehicle.model}`,
-              value: vehicle,
-            };
-          }),
-        },
-      ])
-      .then((answers) => {
-        const vehicleToTowVin = answers.vehicleToTow;
-        const vehichleToTow = this.vehicles.find(vehicle => vehicle.vin === vehicleToTowVin);
-        const selectedVehicle = this.vehicles.find(vehicle => vehicle.vin === this.selectedVehicleVin);
+        .prompt([
+            {
+                type: 'list',
+                name: 'vehicleToTowVin',
+                message: 'Select a vehicle to tow',
+                choices: this.vehicles.map((vehicle) => {
+                    console.log(`Mapping vehicle: ${vehicle.vin} -- ${vehicle.make} ${vehicle.model}`); // Added debug log
+                    return {
+                        name: `${vehicle.vin} -- ${vehicle.make} ${vehicle.model}`,
+                        value: vehicle.vin,  // Returning only the VIN
+                    };
+                }),
+            },
+        ])
+        .then((answers) => {
+            const vehicleToTowVin = answers.vehicleToTowVin;
+            const vehicleToTow = this.vehicles.find(vehicle => vehicle.vin === vehicleToTowVin);
+            const selectedVehicle = this.vehicles.find(vehicle => vehicle.vin === this.selectedVehicleVin);
 
-        if(!vehichleToTow || !selectedVehicle) return;
+            if (!vehicleToTow || !selectedVehicle) {
+                console.log('Invalid vehicle selected or no vehicle selected.');
+                return;
+            }
 
-        if(selectedVehicle instanceof Truck  && this.selectedVehicleVin !== vehichleToTow.vin){
-          selectedVehicle.tow(vehichleToTow);
-        }
-        else{
-          console.log('The truck cannot tow itself or the selected vehicle is not valid.');
-        }
-        this.performActions();
-      });
-  }
+            if (selectedVehicle instanceof Truck && this.selectedVehicleVin !== vehicleToTow.vin) {
+                selectedVehicle.tow(vehicleToTow);
+            } else {
+                console.log('The truck cannot tow itself or the selected vehicle is not valid.');
+            }
+
+            this.performActions();
+        });
+}
 
   // method to perform actions on a vehicle
   performActions(): void {
