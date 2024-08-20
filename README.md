@@ -17,6 +17,7 @@ My motivation for building this project was to enhance my understanding of TypeS
 - [How to Contribute](#how-to-contribute)
 - [Tests](#tests)
 - [Questions](#questions)
+- [Walkthrough](#walkthrough)
 
 ## Installation
 
@@ -39,10 +40,10 @@ This project is licensed under the MIT license.
 
 ## Badges
 
-![badge](https://img.shields.io/github/license/mirasoldavila13/Vehicle-Builder-CLI)
+![License](https://img.shields.io/github/license/mirasoldavila13/Vehicle-Builder-CLI)
 ![badge](https://img.shields.io/github/last-commit/mirasoldavila13/Vehicle-Builder-CLI)
 ![badge](https://img.shields.io/github/languages/top/mirasoldavila13/Vehicle-Builder-CLI)
-![badge](https://img.shields.io/github/stars/mirasoldavila13/Vehicle-Builder-CLI?style=social)
+![GitHub Stars](https://img.shields.io/github/stars/mirasoldavila13/Vehicle-Builder-CLI?style=social)
 ![badge](https://img.shields.io/github/issues-closed/mirasoldavila13/Vehicle-Builder-CLI)
 
 ## Features
@@ -110,3 +111,7 @@ At this time, the Vehicle Builder CLI project does not include automated tests o
 ## Questions
 
 If you have any questions about the project, you can contact me via my GitHub profile at [mirasoldavila13](https://github.com/mirasoldavila13) or via email at contact@vehiclebuildercli.com.
+
+## Walkthrough
+
+[Click here to view the walkthrough video](https://drive.google.com/file/d/1keGemsJk7Rlg-7LRhR7XZDrU5Esccwog/view?usp=sharing)
